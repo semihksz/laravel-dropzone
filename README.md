@@ -18,7 +18,7 @@ php artisan make:model Images -m
 
 4: Modelimizi ve Migration dosyamızı oluşturduktan sonra Images Migration dosyamızı açıyoruz ve eklemek istediğimiz sütunları yazıyoruz. Ben sadece name sütununu ekledim siz istediklerinizi ekleyebilirsiniz.
 
-5: Migration dosyamızı oluşturduktan sonra Model dosyamızı açıyoruz ve eklediğimiz sütun isimlerini illable içerisine ekliyoruz.
+5: Migration dosyamızı oluşturduktan sonra Model dosyamızı açıyoruz ve eklediğimiz sütun isimlerini $fillable içerisine ekliyoruz.
 
 6: Bu işlemleri tamamladıktan sonra tablomuzu oluşturuyoruz:
 
