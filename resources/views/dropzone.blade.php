@@ -14,11 +14,6 @@
 
 <body>
 
-    @if (session()->has('success'))
-        <div class="alert alert-success" role="alert">
-            {{ session()->get('success') }}
-        </div>
-    @endif
     <div class="controller">
         <h2>Laravel Çoklu Fotoğraf Yükleme</h2>
         <div class="dropzone" id="myDropzone"></div>
@@ -31,14 +26,22 @@
     </script>
 
     <script>
+        //myDropzone divde tanımlanmış id değeridir
         Dropzone.options.myDropzone = {
+            //controllerda $request->file('file')  buraya yazdığımız file paramName'den geliyor
             paramName: "file",
+            //en fazla yüklenebilecek olan dosya boyutunu yazıyoruz
             maxFilesize: 12,
+            //en fazla yüklenebilecek dosya sayısını belirtiyoruz (zorunlu değil)
             maxFiles: 5,
+            //dosyaların gönderileceği yolu belirtiyoruz
             url: "{{ route('dropzone.upload') }}",
+            //hata almamak için token belirtiyoruz buradaki token head etiketleri içerisinde tanımlanan token
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
+
+            //kabul edilen dosya uzantılarını yazıyoruz
             acceptedFiles: ".jpeg,.jpg,.png,.gif",
             success: function(file, response) {
                 console.log(response);

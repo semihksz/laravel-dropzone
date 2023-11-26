@@ -9,6 +9,7 @@ class Images extends Model
 {
     use HasFactory;
 
+    //dosya yükleme işleminin yapılabilmesi için oluşturduğumuz tablodaki sütun isimlerini burada belirtiyoruz
     protected $fillable = [
         'name',
     ];

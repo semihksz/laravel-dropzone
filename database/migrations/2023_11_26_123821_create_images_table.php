@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        //yüklenen dosyanın isimlerini ben veritabanına ekleyeceğim siz isterseniz başka işlemler de yapabilirsiniz
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->string('name');
