@@ -8,16 +8,18 @@
 $ laravel new laravel-dropzone
 ```
 
-2: Projeyi açtığımızda ilk işlem olarak .env dosyasını açıyoruz ve DB_USERNAME, DB_PASSWORD bilgilerimizi giriyoruz
+2: Projeyi açtığımızda ilk işlem olarak .env dosyasını açıyoruz ve DB_USERNAME, DB_PASSWORD bilgilerimizi giriyoruz.
+
 3: Sonrasında yüklenen dosyaları veritabanına da kaydedeceğimiz için bir Model ve Migration oluşturuyoruz:
 
 ```bash
 $ php artisan make:model Images -m
 ```
 
-4: Modelimizi ve Migration dosyamızı oluşturduktan sonra Images Migration dosyamızı açıyoruz ve eklemek istediğimiz sütunları yazıyoruz.
-Ben sadece name sütununu ekledim siz istediklerinizi ekleyebilirsiniz.
+4: Modelimizi ve Migration dosyamızı oluşturduktan sonra Images Migration dosyamızı açıyoruz ve eklemek istediğimiz sütunları yazıyoruz. Ben sadece name sütununu ekledim siz istediklerinizi ekleyebilirsiniz.
+
 5: Migration dosyamızı oluşturduktan sonra Model dosyamızı açıyoruz ve eklediğimiz sütun isimlerini $fillable içerisine ekliyoruz.
+
 6: Bu işlemleri tamamladıktan sonra tablomuzu oluşturuyoruz:
 
 ```bash
@@ -31,8 +33,11 @@ $ php artisan make:controller DropzoneController
 ```
 
 8: Controller oluştuktan sonra web.php dosyasını açıyoruz ve gerekli düzenlemeleri yapıyoruz.
+
 9: Route'ları ayarladıktan sonra oluşturduğumuz DropzoneController dosyasını açıyoruz ve gerekli fonksiyonları ekliyoruz.
+
 10: Ben view içerisindeki welcome.blade.php dosyasını dropzone.blade.php olarak değiştirdim siz istediğiniz ismi verebilirsiniz.
+
 11: Son olarak dropzone.blade.php dosyasında gerekli işlemleri yaptıktan sonra projeyi çalıştırabilirsiniz.
 
 ```bash
